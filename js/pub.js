@@ -22,7 +22,6 @@ h+=js.t1.substr(0,1);
 	h+=js.t1;
 	h+='</div>';
 	h+='</div>';
-al(h);
 	return h;
 	
 };
