@@ -1,6 +1,7 @@
 function main()
 {
-ap("<div>main</div>",jid("show"),1);
+H.str=H.lista({"t1":"首页"});
+ap(H.str,jid("show"),1);
 }
 function fx()  
 {  
