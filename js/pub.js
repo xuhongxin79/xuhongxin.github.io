@@ -10,7 +10,6 @@ H.lista=function(js)
 	H.t+=js.t1;
 	H.t+='</div>';
 	H.t+='</div>';
-al(H.t);
 	return H.t;
 	
 };
@@ -22,6 +21,7 @@ al(str);
 }
 	return str;
 };
+al(H);
 function a(){  
 var url = location.hash;  
 if(url==''){
