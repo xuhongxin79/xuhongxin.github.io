@@ -1,3 +1,4 @@
+window.H={};
 function a(){  
 var url = location.hash;  
 if(url==''){
