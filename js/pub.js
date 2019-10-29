@@ -1,4 +1,13 @@
 window.H={};
+H.lista=function(js)
+{
+H.t="";
+	H.t+='<div class="cssa">';
+        H.t+='<div class="cssb">';  
+	H.t+='</div>'; 
+	H.t+='</div>';
+	
+};
 function a(){  
 var url = location.hash;  
 if(url==''){
