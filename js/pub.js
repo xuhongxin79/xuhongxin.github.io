@@ -15,7 +15,7 @@ H.lista=function(js)
 	H.t="";
 	H.t+='<div class="cssa">';
         H.t+='<div class="cssb">';
-	H.t+=H.subindexstr(js.t1);
+H.t+=window.H.subindexstr(js.t1);
 	H.t+='</div>'; 
 	H.t+='<div class="cssc">';
 	H.t+=js.t1;
@@ -32,7 +32,7 @@ al(str);
 }
 	return str;
 };
-al(H);
+al(window.H);
 function a(){  
 var url = location.hash;  
 if(url==''){
