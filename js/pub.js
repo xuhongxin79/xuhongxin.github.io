@@ -16,7 +16,7 @@ function lista(js)
 	var h="";
 	h+='<div class="cssa">';
         h+='<div class="cssb">';
-h+=js.t1;
+h+=js.t1.substr(0,1);
 	h+='</div>'; 
 	h+='<div class="cssc">';
 	h+=js.t1;
