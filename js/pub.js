@@ -103,50 +103,51 @@ var timestamp = Date.parse(new Date());
 return timestamp;
 }
 
-
-
 function ap(h,obj,kb)
-{ 	//try{clearInterval(tinter);}catch(e){} 	
-if(kb==1){  	
-	obj.innerHTML=""; 	
-} 	
-	if(typeof(h)=="string"){  	
-		var obj_dom=cel(h); 	
-	}else 	{  	
-		var obj_dom=h; 
-	}  	
-	var arr=[];
-	for(var ik=0;ik<obj_dom.length;ik++){
-		arr.push(obj_dom[ik]);  	
-	} 
+{
+	//try{clearInterval(tinter);}catch(e){}
+	if(kb==1){
+		obj.innerHTML="";
+	}
+	if(typeof(h)=="string"){
+		var obj_dom=cel(h);
+	}else
+	{
+		var obj_dom=h;
+	}
+		var arr=[];
+		for(var ik=0;ik<obj_dom.length;ik++){
+			arr.push(obj_dom[ik]);
+		}
 	if(kb==1||kb==0){
 		for(var ik=0;ik<arr.length;ik++){
 			obj.appendChild(arr[ik]);
-		} 	
-	}else if(kb==3){//前插入  
+		}
+	}else if(kb==3){//前插入
 		var parent = obj.parentNode;
 		for(var ik=0;ik<arr.length;ik++){
-			//parent.appendChild(arr[ik]);
-			parent.insertBefore(arr[ik], obj);
-		}  	
+				//parent.appendChild(arr[ik]);
+				parent.insertBefore(arr[ik], obj);
+		}
 		/*if (parent.lastChild == obj) {
-		// 如果最后的节点是目标元素，则直接添加。因为默认是最后
-		for(var ik=0;ik<arr.length;ik++){
-		//parent.appendChild(arr[ik]);    	
-		parent.insertBefore(arr[ik], obj);  
-		}  	}else {   
-		for(var ik=0;ik<arr.length;ik++){    
-		parent.insertBefore(arr[ik], obj.nextSibling);   	
-		}     
-		}*/ 
-	}//if 	
+			// 如果最后的节点是目标元素，则直接添加。因为默认是最后
+			for(var ik=0;ik<arr.length;ik++){
+				//parent.appendChild(arr[ik]);
+				parent.insertBefore(arr[ik], obj);
+			}
+		}else {
+			for(var ik=0;ik<arr.length;ik++){
+					parent.insertBefore(arr[ik], obj.nextSibling);
+			}
+    	}*/
+	}//if
 	else if(kb==4){
 var parent = obj.parentNode;
 if (parent.lastChild == obj) {
-for(var ik=0;ik<arr.length;ik++){  	parent.appendChild(arr[ik]);    
+for(var ik=0;ik<arr.length;ik++){			parent.appendChild(arr[ik]);				
 }
 }else {
-for(var ik=0;ik<arr.length;ik++){   	parent.insertBefore(arr[ik], obj.nextSibling);
+for(var ik=0;ik<arr.length;ik++){				parent.insertBefore(arr[ik], obj.nextSibling);
 }
 }
 }else if(kb==5){//内部前插入
@@ -154,43 +155,61 @@ var os = obj.children;
 if(os.length>0)
 {
 var oFirst=os[0];
-for(var ik=0;ik<arr.length;ik++){  
-	obj.insertBefore(arr[ik], oFirst);
-}  	
-}  	else  	{ 
-	for(var ik=0;ik<arr.length;ik++){
-		obj.appendChild(arr[ik]);
-	}  
-}
-	/*if (parent.lastChild == obj) {   	// 如果最后的节点是目标元素，则直接添加。因为默认是最后   	for(var ik=0;ik<arr.length;ik++){    	//parent.appendChild(arr[ik]);    	parent.insertBefore(arr[ik], obj);   	}  	}else {   	for(var ik=0;ik<arr.length;ik++){     	parent.insertBefore(arr[ik], obj.nextSibling);   	}     	}*/ 
-}  
+for(var ik=0;ik<arr.length;ik++){
+				obj.insertBefore(arr[ik], oFirst);
+			}
+		}
+		else
+		{
+			for(var ik=0;ik<arr.length;ik++){
+					obj.appendChild(arr[ik]);				
+			}
+		}
+		
+		/*if (parent.lastChild == obj) {
+			// 如果最后的节点是目标元素，则直接添加。因为默认是最后
+			for(var ik=0;ik<arr.length;ik++){
+				//parent.appendChild(arr[ik]);
+				parent.insertBefore(arr[ik], obj);
+			}
+		}else {
+			for(var ik=0;ik<arr.length;ik++){
+					parent.insertBefore(arr[ik], obj.nextSibling);
+			}
+    	}*/
+	}
+	
 	//allBj();
 }
+
 function pm(){ 
-	var js={};
-	js.w=window.document.body.offsetWidth; 
-	js.h=window.document.body.offsetHeight; 	
-	return js;
+var js={};
+js.w=window.document.body.offsetWidth; 
+js.h=window.document.body.offsetHeight; 	
+return js;
 }
 function cel(h){ 	
-	var objcel=document.createElement("div"); 
-	objcel.innerHTML=h; 
-	return objcel.childNodes;
+var objcel=document.createElement("div"); 
+objcel.innerHTML=h; 
+return objcel.childNodes;
 }
 function jid(id)
-{   	if(!document.getElementById(id)){  
-	console.dir(id+"不存在"); 	} 	
- return document.getElementById(id);
+{
+if(!document.getElementById(id)){
+return;
+} 	
+return document.getElementById(id);
 }
 
 function al(str)
-{ 	if(typeof str=="object"){  	
-	str=JSON.stringify(str); 	}
-var pm1=pm(); 	//创建textarea
-var oLog=jid("my_ts"); 
-//oLog.id="myLogId"; 
+{
+if(typeof str=="object"){  	
+str=JSON.stringify(str);
+}
+var pm1=pm();
+var oLog=jid("my_ts");  
 oLog.value=str+"\n-----------\n"+oLog.value;
- oLog.style.margin='auto'; 
+oLog.style.margin='auto'; 
 oLog.style.display='block';
 oLog.style.width=pm1.w+'px';
 oLog.style.overflow="scroll";
@@ -201,49 +220,49 @@ oLog.style.top="0";
 oLog.style.right="0";
 oLog.style.height="100px";
 oLog.style.zIndex="1500";
-oLog.scrollTo(0,0);
+//oLog.scrollTo(0,0);
 } 
 function jpost(js)
 {
 /*
 if(window.navigator.onLine==false){alert("当前网络离线，请检查网络");}
 */ 	
-	var url=js.url; 
-	var data=js.data; 	
-	var cb=js.cb;
-//tsB('<img src="image/system/downing.gif" width="50" />');
+var url=js.url; 
+var data=js.data; 	
+var cb=js.cb;
 var xmlhttp;
-if (window.XMLHttpRequest)   {// code for IE7+, Firefox, Chrome, Opera, Safari  
-	xmlhttp=new XMLHttpRequest();   }
-else   {// code for IE6, IE5  
-	xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");   }
-xmlhttp.onreadystatechange=function()   {   
-	if (xmlhttp.readyState==4 && xmlhttp.status==200)     {
+
+if (window.XMLHttpRequest)   {  
+xmlhttp=new XMLHttpRequest();
+}
+else{  
+xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+}
+
+
+
+xmlhttp.onreadystatechange=function(){
+if (xmlhttp.readyState==4 && xmlhttp.status==200){
 var rs=xmlhttp.responseText;
-//alert(rs);
-//console.log(rs);
-eval(cb).apply(this,[rs]);  	//---------------------------------  	
-		var html = rs;    	
-		//var hd = document.getElementsByTagName("head")[0];
+eval(cb).apply(this,[rs]); 	
+var html = rs;    	
 if(!jid("script1")){
 ap('<div id="script1" style="display:none;"></div>',document.body,0);
 }
 var hd=jid("script1");
 hd.innerHTML='';  	
-		var re = /(?:<script([^>]*)?>)((\n|\r|.)*?)(?:<\/script>)/ig;      	
-		var srcRe = /\ssrc=([\'\"])(.*?)\1/i;      
-		var typeRe = /\stype=([\'\"])(.*?)\1/i;      
-		var match;      	
-		while(match = re.exec(html)){        
-			var attrs = match[1];       
-			var srcMatch = attrs ? attrs.match(srcRe) : false;        
-			if(srcMatch && srcMatch[2]){      
-				var s = document.createElement("script");  
-				s.src = srcMatch[2];
-				var typeMatch = attrs.match(typeRe);  
-				if(typeMatch && typeMatch[2]){             s.type = typeMatch[2];           }           hd.appendChild(s);          }else if(match[2] && match[2].length > 0){           if(window.execScript) {             window.execScript(match[2]);           } else {             window.eval(match[2]);           }         }      	}  	
-		
-		
+var re = /(?:<script([^>]*)?>)((\n|\r|.)*?)(?:<\/script>)/ig;      	
+var srcRe = /\ssrc=([\'\"])(.*?)\1/i;      
+var typeRe = /\stype=([\'\"])(.*?)\1/i;      
+var match;      	
+while(match = re.exec(html)){        
+var attrs = match[1];       
+var srcMatch = attrs ? attrs.match(srcRe) : false;        
+if(srcMatch && srcMatch[2]){      
+var s = document.createElement("script");  
+s.src = srcMatch[2];
+var typeMatch = attrs.match(typeRe);  
+if(typeMatch && typeMatch[2]){             s.type = typeMatch[2];           }           hd.appendChild(s);          }else if(match[2] && match[2].length > 0){           if(window.execScript) {             window.execScript(match[2]);           } else {             window.eval(match[2]);           }         }      	}  	
 }
 if(xmlhttp.status==500){
 alert(500);
@@ -256,4 +275,3 @@ xmlhttp.open("POST",url,true);
 xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
 xmlhttp.send(data);
 }
-
