@@ -10,11 +10,13 @@ H.lista=function(js)
 	H.t+=js.t1;
 	H.t+='</div>';
 	H.t+='</div>';
+al(H.t);
 	return H.t;
 	
 };
 H.strindexstr=function(str)
 {
+al(str);
 	if(str.length>1){
 	   str=str.substr(0,1);
 }
