@@ -1,4 +1,15 @@
 window.H={};
+H.getBody=function()
+{
+if(document.body)
+{
+return document.body;
+}
+else
+{
+return document.documentElement;
+}
+};
 H.lista=function(js)
 {
 	H.t="";
@@ -184,8 +195,8 @@ for(var ik=0;ik<arr.length;ik++){
 
 function pm(){ 
 var js={};
-js.w=window.document.body.offsetWidth; 
-js.h=window.document.body.offsetHeight; 	
+js.w=H.getBody.offsetWidth; 
+js.h=H.getBody.offsetHeight; 	
 return js;
 }
 function cel(h){ 	
@@ -247,7 +258,7 @@ var rs=xmlhttp.responseText;
 eval(cb).apply(this,[rs]); 	
 var html = rs;    	
 if(!jid("script1")){
-ap('<div id="script1" style="display:none;"></div>',document.body,0);
+ap('<div id="script1" style="display:none;"></div>',H.getBody,0);
 }
 var hd=jid("script1");
 hd.innerHTML='';  	
