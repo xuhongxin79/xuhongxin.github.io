@@ -1,0 +1,42 @@
+html,body{
+margin:0;
+padding:0;
+}
+/*超链*/
+a{
+text-decoration:none; 
+color:#151081;
+font-size:14px;
+}
+body{
+margin-bottom:1000px;
+}
+/*导航条外层*/
+.nav{
+bottom:0; 
+width:100%; 
+position:fixed; 
+text-align:center; 
+z-index:10000; 
+padding:0.5em 0;
+background: -webkit-linear-gradient(#000000,#FF0000, #000000);
+background: -o-linear-gradient(#000000,#FF0000, #000000); 
+background: -moz-linear-gradient(#000000,#FF0000, #000000); 
+background: linear-gradient(#000000,#FF0000, #000000); 
+}
+/*导航条链接*/
+.nav a{
+display:inline-table; 
+width:18%; 
+padding:0; 
+text-align:center; 
+color:#FFFFFF; 
+text-decoration:none; 
+font-size:1.2em;
+}
+/*导航条图片*/
+.nav a img{
+display:block; 
+width:2em;  height:2em; 
+margin:auto;
+} 
