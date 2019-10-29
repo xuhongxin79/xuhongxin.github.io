@@ -60,11 +60,11 @@ else
 {
 var url=json_to_url(theRequest);
 url="?"+url;
-ap2(url);
+//ap2(url);
 //console.log(url);
-//var f=theRequest["f"];
-//var func=eval("("+f+")");
-//func.apply(this,[theRequest]);
+var f=theRequest["f"];
+var func=eval("("+f+")");
+func.apply(this,[theRequest]);
 }
 
 }catch(e){
