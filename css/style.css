@@ -49,6 +49,9 @@ overflow:hidden;
 .cssb{
 width:8%;
 float:left;
+background-color:#FF6600;
+color:#FFFFFF;
+border-radius:8%;
 }
 .cssc{
 width:90%;
