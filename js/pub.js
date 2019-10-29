@@ -22,8 +22,7 @@ h+=js.t1.substr(0,1);
 	h+=js.t1;
 	h+='</div>';
 	h+='</div>';
-if(js.url)
-{
+if(js.url){
 h='<a href="'+js.url+'">'+h+'</a>';
 }
 	return h;
