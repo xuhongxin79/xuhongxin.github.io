@@ -16,7 +16,7 @@ function lista(js)
 	var h="";
 	h+='<div class="cssa">';
         h+='<div class="cssb">';
-h+=subindexstr(js.t1);
+h+=js.t1;
 	h+='</div>'; 
 	h+='<div class="cssc">';
 	h+=js.t1;
