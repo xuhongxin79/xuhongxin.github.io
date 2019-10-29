@@ -43,3 +43,13 @@ display:block;
 width:2em;  height:2em; 
 margin:auto;
 } 
+.cssa{
+overflow:hidden;
+}
+cssb{
+width:50px;
+float:left;
+}
+.cssc{
+margin-left:10px;
+}
