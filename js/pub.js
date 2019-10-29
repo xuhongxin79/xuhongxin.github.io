@@ -13,6 +13,8 @@ return document.documentElement;
 
 function lista(js)
 {
+al("lista");
+al(js);
 	var h="";
 	h+='<div class="cssa">';
         h+='<div class="cssb">';
