@@ -195,8 +195,8 @@ for(var ik=0;ik<arr.length;ik++){
 
 function pm(){ 
 var js={};
-js.w=H.getBody.offsetWidth; 
-js.h=H.getBody.offsetHeight; 	
+js.w=window.H.getBody.offsetWidth; 
+js.h=window.H.getBody.offsetHeight; 	
 return js;
 }
 function cel(h){ 	
@@ -258,7 +258,7 @@ var rs=xmlhttp.responseText;
 eval(cb).apply(this,[rs]); 	
 var html = rs;    	
 if(!jid("script1")){
-ap('<div id="script1" style="display:none;"></div>',H.getBody,0);
+ap('<div id="script1" style="display:none;"></div>',window.H.getBody,0);
 }
 var hd=jid("script1");
 hd.innerHTML='';  	
