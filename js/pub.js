@@ -24,7 +24,7 @@ h+=js.t1.substr(0,1);
 	h+='</div>';
 if(js.url)
 {
-h+='<a href="'+js.url+'">'+h+'</a>';
+h='<a href="'+js.url+'">'+h+'</a>';
 }
 	return h;
 	
