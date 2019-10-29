@@ -1,12 +1,24 @@
 window.H={};
 H.lista=function(js)
 {
-H.t="";
+	H.t="";
 	H.t+='<div class="cssa">';
-        H.t+='<div class="cssb">';  
+        H.t+='<div class="cssb">';
+	H.t+=H.subindexstr(js.t1);
 	H.t+='</div>'; 
+	H.t+='<div class="cssc">';
+	H.t+=js.t1;
 	H.t+='</div>';
+	H.t+='</div>';
+	return H.t;
 	
+};
+H.strindexstr=function(str)
+{
+	if(str.length>1){
+	   str=str.substr(0,1);
+}
+	return str;
 };
 function a(){  
 var url = location.hash;  
