@@ -106,7 +106,7 @@ func.apply(this,[theRequest]);
 }
 
 }catch(e){
-	alert(e);
+	//alert(e);
 	location.href="#f=main";
 	}
 }
