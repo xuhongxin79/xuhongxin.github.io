@@ -1,5 +1,5 @@
 window.H={};
-H.getBody=function()
+function getBody()
 {
 if(document.body)
 {
@@ -10,21 +10,22 @@ else
 return document.documentElement;
 }
 };
-H.lista=function(js)
+
+function lista(js)
 {
-	H.t="";
-	H.t+='<div class="cssa">';
-        H.t+='<div class="cssb">';
-H.t+=window.H.subindexstr(js.t1);
-	H.t+='</div>'; 
-	H.t+='<div class="cssc">';
-	H.t+=js.t1;
-	H.t+='</div>';
-	H.t+='</div>';
-	return H.t;
+	var h="";
+	h+='<div class="cssa">';
+        h+='<div class="cssb">';
+h+=subindexstr(js.t1);
+	h+='</div>'; 
+	h+='<div class="cssc">';
+	h+=js.t1;
+	h+='</div>';
+	h+='</div>';
+	return h;
 	
 };
-H.strindexstr=function(str)
+function strindexstr(str)
 {
 al(str);
 	if(str.length>1){
@@ -32,7 +33,6 @@ al(str);
 }
 	return str;
 };
-al(window.H);
 function a(){  
 var url = location.hash;  
 if(url==''){
@@ -195,8 +195,8 @@ for(var ik=0;ik<arr.length;ik++){
 
 function pm(){ 
 var js={};
-js.w=window.H.getBody.offsetWidth; 
-js.h=window.H.getBody.offsetHeight; 	
+js.w=getBody.offsetWidth; 
+js.h=getBody.offsetHeight; 	
 return js;
 }
 function cel(h){ 	
@@ -258,7 +258,7 @@ var rs=xmlhttp.responseText;
 eval(cb).apply(this,[rs]); 	
 var html = rs;    	
 if(!jid("script1")){
-ap('<div id="script1" style="display:none;"></div>',window.H.getBody,0);
+ap('<div id="script1" style="display:none;"></div>',getBody,0);
 }
 var hd=jid("script1");
 hd.innerHTML='';  	
