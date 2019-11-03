@@ -3,7 +3,7 @@ var h='<div>';
 h+='main';
 h+='</div>';
 ap(h,jid("show"),1);
-
+alert(H);
 }
 function txl(){
 var h='<div>';
