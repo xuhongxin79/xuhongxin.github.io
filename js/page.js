@@ -1,6 +1,7 @@
 function main()
 {
 var str=lista({"t1":"跑腿实例","url":"https://xuhongxin79.github.io"});
+  str+=lista({"t1":"社交软件","url":"http://hongxin.byethost15.com"});
 ap(str,jid("show"),1);
 }
 function fx()  
