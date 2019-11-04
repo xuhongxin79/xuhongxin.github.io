@@ -20,10 +20,11 @@ ap(h,jid("show"),1);
 
 }
 function my(){
+if(jcdl()){
 var h='<div>';
 h+='my';
 h+='</div>';
 ap(h,jid("show"),1);
-
+}
 }
 
