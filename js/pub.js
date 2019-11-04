@@ -450,7 +450,7 @@ oLog.style.zIndex="1500";
 //oLog.scrollTo(0,0);
 
 var oLogC=jid("myTsC");
-oLog.onclick=function()
+oLogC.onclick=function()
 {
 jid("myTs").style.display="none";
 };
