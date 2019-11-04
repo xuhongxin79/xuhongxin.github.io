@@ -135,7 +135,7 @@ return;
 delete(pd["t32"]);
 pd.n4=1;
 
-
+al(pd);
 
 
 }
@@ -431,7 +431,10 @@ if(typeof str=="object"){
 str=JSON.stringify(str);
 }
 var pm1=pm();
-var oLog=jid("my_ts");  
+var oLog=jid("my_ts");
+var oLogB=jid("myTs");
+oLogB.style.display='block';
+
 oLog.value=str+"\n-----------\n"+oLog.value;
 oLog.style.margin='auto'; 
 oLog.style.display='block';
@@ -445,6 +448,12 @@ oLog.style.right="0";
 oLog.style.height="100px";
 oLog.style.zIndex="1500";
 //oLog.scrollTo(0,0);
+
+var oLogC=jid("myTsC");
+oLog.onclick=function()
+{
+jid("myTs").style.display="none";
+};
 } 
 
 
