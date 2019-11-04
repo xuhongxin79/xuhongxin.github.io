@@ -3,14 +3,14 @@ var h='<div>';
 h+='main';
 h+='</div>';
 ap(h,jid("show"),1);
-al("123");
 }
 function txl(){
+if(jcdl()){
 var h='<div>';
 h+='txl';
 h+='</div>';
 ap(h,jid("show"),1);
-
+}
 }
 function fx(){
 var h='<div>';
