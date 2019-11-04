@@ -1,4 +1,30 @@
 window.H={};
+
+function jcdl()
+{
+if(cookie_get("uid"))
+{
+return true;
+}
+else
+{
+var h="";
+h+='<form name="form3" id="form3" action="" method="post">';
+h+='<input type="text" name="t2" id="t2" placeholder="手机号码"/>';
+h+='<input type="password" name="t3" id="t3" placeholder="密码"/>';
+h+='<input type="button" name="sub" id="sub" value="登录"/>';
+h+='<input type="button" name="subB" id="subB" value="注册" onclick="location.href=&quot;#f=zc&quot;"/>';
+h+='</form>';
+ap(h,jid("show"),1);
+return false;
+}
+}
+
+
+
+
+
+
 function cookie_get(c_name)
 {
 if (document.cookie.length>0)   { 
