@@ -25,6 +25,7 @@ return false;
 
 
 
+
 function zc()
 {
 var h="";
@@ -49,6 +50,12 @@ ap(h,jid("show"),1);
 
 
 
+
+
+function zcSave()
+{
+
+}
 
 
 
