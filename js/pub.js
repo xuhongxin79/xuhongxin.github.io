@@ -135,7 +135,7 @@ return;
 delete(pd["t32"]);
 pd.n4=1;
 
-al(pd);
+alB(pd);
 
 
 }
@@ -420,6 +420,16 @@ return;
 return document.getElementById(id);
 }
 
+
+
+
+function alB(str)
+{
+if(typeof str=="object"){  	
+str=JSON.stringify(str);
+}
+alert(str);
+}
 
 
 
