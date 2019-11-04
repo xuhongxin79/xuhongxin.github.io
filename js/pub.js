@@ -132,6 +132,10 @@ return;
 }
 }
 
+delete(pd["t32"]);
+pd.n4=1;
+
+
 
 
 }
