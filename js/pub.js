@@ -9,7 +9,7 @@ return true;
 else
 {
 var h="";
-h+='<form name="form3" id="form3" action="" method="post">';
+h+='<form name="form3" id="form3" action="" method="post" class="css12">';
 h+='<input type="text" name="t2" id="t2" placeholder="手机号码"/>';
 h+='<input type="password" name="t3" id="t3" placeholder="密码"/>';
 h+='<input type="button" name="sub" id="sub" value="登录"/>';
