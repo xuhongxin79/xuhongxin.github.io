@@ -1,5 +1,68 @@
 window.H={};
 
+function hqbdB(formid){
+	var obj=hqbd(formid);
+	var obj2={};
+	for(var key in obj){
+		obj2[key]=obj[key][0];
+		}
+	return obj2;
+}
+
+
+
+
+
+
+function hqbd(formid){
+	var FormObj=document.getElementById(formid);
+	var OutPut={};
+	var arr=[];
+	var js={}
+	for(var i=0;i<FormObj.length;i++){
+	var TagName=FormObj[i].tagName;
+	var Name=FormObj[i].getAttribute("name");
+	var id=FormObj[i].getAttribute("id");
+	var tag_type=FormObj[i].getAttribute("type");
+	if(OutPut[Name]==null){
+		OutPut[Name]=[];
+		}
+	switch(TagName){
+		case "INPUT":
+			//checkbox
+			if(tag_type=="checkbox"){
+				if(jid(id).checked)
+				{
+					OutPut[Name].push(jid(id).value);
+				}
+				else
+				{
+					OutPut[Name].push("F");
+				}
+			}
+			else if(tag_type=="button"){
+				delete(OutPut[Name]);
+				}
+			else
+			{
+				OutPut[Name].push(jid(id).value);
+			}
+		break;
+		case "TEXTAREA":
+		OutPut[Name].push(jid(id).value);
+		break;
+		case "SELECT":
+		OutPut[Name].push(FormObj[i].options[FormObj[i].selectedIndex].value);
+		break;
+		}//switch
+		}//for
+		return OutPut;	
+}
+
+
+
+
+
 function jcdl()
 {
 if(cookie_get("uid"))
@@ -42,7 +105,7 @@ h+='<input type="text" name="t4" id="t4" placeholder="你父亲的姓名"/>';
 h+='<input type="text" name="t5" id="t5" placeholder="你母亲的姓名"/>';
 h+='<input type="text" name="t6" id="t6" placeholder="你读小学的名称"/>';
 
-h+='<input type="button" name="sub" id="sub" value="注册"/>';
+h+='<input type="button" name="sub" id="sub" value="注册" onclick="zcSave();"/>';
 h+='<input type="button" name="subB" id="subB" value="登录" onclick="location.href=&quot;#f=my&quot;"/>';
 h+='</form>';
 ap(h,jid("show"),1);
@@ -54,6 +117,22 @@ ap(h,jid("show"),1);
 
 function zcSave()
 {
+var pd=hqbdB("form3");
+if(pd.t32!=pd.t3)
+{
+alert("两次密码不一致。");
+return;
+}
+for(var k in pd)
+{
+if(!pd[k])
+{
+alert("不能留空白。");
+return;
+}
+}
+
+
 
 }
 
@@ -144,9 +223,19 @@ if (is_weixin) {
 ts("<div>检测你正在使用微信浏览器，部分功能不支持，请点击右上角三点在浏览器中打开。</div>"); 	
 }
 }
+
+
+
+
+
 function scrollTo1(){
 window.scrollTo(0,0);
 }
+
+
+
+
+
 function json_to_url(json)
 {
 	var str1="";
@@ -158,6 +247,12 @@ json["time"]=gettime();
 	str1=str1.substr(0,str1.length-1);
 	return str1;
 }
+
+
+
+
+
+
 function ap2(url)
 {
 	jpost({"url":url,"data":"","cb":function(d){
@@ -166,7 +261,11 @@ function ap2(url)
 		top_back_control(webBt);
 	}});
 }
-//[002]
+
+
+
+
+
 function af(url){
 try{
 var arr1=new RegExp("\#(.+)", "g").exec(url)[1];
@@ -184,8 +283,6 @@ else
 {
 var url=json_to_url(theRequest);
 url="?"+url;
-//ap2(url);
-//console.log(url);
 var f=theRequest["f"];
 var func=eval("("+f+")");
 func.apply(this,[theRequest]);
@@ -198,10 +295,16 @@ func.apply(this,[theRequest]);
 }
 
 
+
+
+
 function gettime(){
 var timestamp = Date.parse(new Date());
 return timestamp;
 }
+
+
+
 
 function ap(h,obj,kb)
 {
@@ -282,17 +385,29 @@ for(var ik=0;ik<arr.length;ik++){
 	//allBj();
 }
 
+
+
+
+
 function pm(){ 
 var js={};
 js.w=getBody.offsetWidth; 
 js.h=getBody.offsetHeight; 	
 return js;
 }
+
+
+
+
 function cel(h){ 	
 var objcel=document.createElement("div"); 
 objcel.innerHTML=h; 
 return objcel.childNodes;
 }
+
+
+
+
 function jid(id)
 {
 if(!document.getElementById(id)){
@@ -300,6 +415,11 @@ return;
 } 	
 return document.getElementById(id);
 }
+
+
+
+
+
 
 function al(str)
 {
@@ -322,6 +442,14 @@ oLog.style.height="100px";
 oLog.style.zIndex="1500";
 //oLog.scrollTo(0,0);
 } 
+
+
+
+
+
+
+
+
 function jpost(js)
 {
 /*
