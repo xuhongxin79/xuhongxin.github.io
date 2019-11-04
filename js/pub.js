@@ -25,6 +25,30 @@ return false;
 
 
 
+function zc()
+{
+var h="";
+h+='<form name="form3" id="form3" action="" method="post" class="css12">';
+h+='<input type="text" name="t1" id="t1" placeholder="用户名"/>';
+h+='<input type="text" name="t2" id="t2" placeholder="手机号码"/>';
+h+='<input type="password" name="t3" id="t3" placeholder="密码"/>';
+h+='<input type="password" name="t32" id="t32" placeholder="重复密码"/>';
+h+='<input type="text" name="t4" id="t4" placeholder="你父亲的姓名"/>';
+h+='<input type="text" name="t5" id="t5" placeholder="你母亲的姓名"/>';
+h+='<input type="text" name="t6" id="t6" placeholder="你读小学的名称"/>';
+
+h+='<input type="button" name="sub" id="sub" value="注册"/>';
+h+='<input type="button" name="subB" id="subB" value="登录" onclick="location.href=&quot;#f=my&quot;"/>';
+h+='</form>';
+ap(h,jid("show"),1);
+}
+
+
+
+
+
+
+
 function cookie_get(c_name)
 {
 if (document.cookie.length>0)   { 
