@@ -135,7 +135,22 @@ return;
 delete(pd["t32"]);
 pd["n4"]=1;
 
-alB(pd);
+var js={};
+js.tableName="yh";
+js.sql="t1="+pd.t1+" or t2="+pd.t2;
+js.method="tjkv";
+js.data=pd;
+js.tss="";
+var str=jsonE(js);
+jpost(
+{
+"url":"?lf=postDb",
+"data":"pd="+str,
+"cb":function(d){
+alB(d);
+}
+}
+);
 
 
 }
@@ -478,7 +493,7 @@ function jpost(js)
 /*
 if(window.navigator.onLine==false){alert("当前网络离线，请检查网络");}
 */ 	
-var url=js.url; 
+var url="load.php"+js.url; 
 var data=js.data; 	
 var cb=js.cb;
 var xmlhttp;
