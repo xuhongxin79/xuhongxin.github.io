@@ -16,7 +16,7 @@ function my()
 {
 var h="";
   h+="<div>个人中心</div>";
-  h+='<form name="ｆorm1"　id＝"form1" method="post" action=""　>';
+  h+='<form name="form1"　id＝"form1" method="post" action=""　>';
   h+='<input type="text" id="t1" name="t1">';
     h+='<input type="button" id="b1" name="b1" value="保存" onclick="mysave()">';
 h+='</form>';
@@ -24,10 +24,20 @@ ap(h,jid("show"),1);
 }
 
 function mysave(){
-  alert(1);
+  
 var d={};
   d.t1=hqbdB('form1');
-dbq({"tableName":"wb","bql":"","iif":"","ts":"","method":"add","data":d,"callBack":function(js){
+dbq(
+  {
+  "tableName":"wb",
+     "bql":"",
+     "iif":"",
+     "ts":"",
+     "method":"add",
+     "data":d,
+     "callBack":function(js){
 alert(js);
-}});
+}
+  }
+);
 }
