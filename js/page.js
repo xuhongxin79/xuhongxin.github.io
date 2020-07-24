@@ -24,6 +24,7 @@ ap(h,jid("show"),1);
 }
 
 function mysave(){
+  alert(1);
 var d={};
   d.t1=hqbdB('form1');
 dbq({"tableName":"wb","bql":"","iif":"","ts":"","method":"add","data":d,"callBack":function(js){
