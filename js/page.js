@@ -1,6 +1,7 @@
 function main()
 {
 var str=lista({"t1":"社区","url":"http://hongxin.byethost15.com"});
+   str+=lista({"t1":"视频","url":"https://www.ixigua.com/home/55760142613"});
    str+=lista({"t1":"仓库","url":"https://github.com/xuhongxin79"});
 ap(str,jid("show"),1);
 }
