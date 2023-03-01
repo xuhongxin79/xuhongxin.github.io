@@ -63,6 +63,9 @@ function hqbdB(formid){
 
 function hqbd(formid){
 	var FormObj=document.getElementById(formid);
+if(FormObj==null){
+return;
+}
 	console.dir(FormObj); 
 	var OutPut={};
 	var arr=[];
