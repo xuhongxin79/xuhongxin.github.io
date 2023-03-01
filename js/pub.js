@@ -20,7 +20,7 @@ function ts(str)
 				layer.id="layer"; 
 				layer.innerHTML=str;
 				layer.style.position='fixed';
-				//layer.style.width=w+'px';
+				
 layer.style.width='100%';
 				layer.style.textAlign='center';
 				layer.style.margin='auto';
