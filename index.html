@@ -7,9 +7,18 @@
 <script language="JavaScript" type="text/javascript">
 var webBt="hx";
 var menuJson={};
+function addJsFile(src){
+var js = document.createElement('script');
+t=new Date().getTime();
+src+="?t="+t;
+js.src = src;
+document.getElementsByTagName('head')[0].appendChild(js);
+}
+addJsFile("js/err.js");
+addJsFile("js/db.js");
+addJsFile("js/pub.js");
+addJsFile("js/page.js");
 </script>
-<script language="JavaScript" type="text/javascript" src="js/err.js?t=new Date().getTime()"></script>
-  <script language="JavaScript" type="text/javascript" src="js/db.js?t=new Date().getTime()"></script>
 <link href="css/style.css?t=new Date().getTime()" rel="stylesheet" type="text/css" />
 </head> 
 <body onhashchange="a();">
@@ -50,8 +59,6 @@ var menuJson={};
 </div>
 </body>
 </html>
-<script language="JavaScript" type="text/javascript" src="js/pub.js?t=new Date().getTime()"></script>
-<script language="JavaScript" type="text/javascript" src="js/page.js?t=new Date().getTime()"></script>
 <script>
 a();
 </script>
