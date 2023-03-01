@@ -29,6 +29,7 @@ function mysave(){
   
 var d={};
   d.t1=hqbdB('form1');
+alert(d);
 dbq(
   {
   "tableName":"wb",
