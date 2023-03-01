@@ -1,5 +1,52 @@
 window.H={};
 
+function ts(str)
+{
+	if(typeof str=="object"){
+				str=JSON.stringify(str);
+	}
+	
+	/*try{
+				document.body.removeChild(layer)
+	}catch(e){}*/
+	
+				var len=str.length;
+				var w=len*18+20;
+	if(w>100)
+	{
+				w=100;
+	}
+				var layer=document.createElement("div"); 
+				layer.id="layer"; 
+				layer.innerHTML=str;
+				layer.style.position='fixed';
+				//layer.style.width=w+'px';
+layer.style.width='100%';
+				layer.style.textAlign='center';
+				layer.style.margin='auto';
+				layer.style.background='#009900';
+				//layer.style.top=(screen.availHeight)*0.25+"px";
+layer.style.top="0px";
+layer.style.left='0px';
+				//layer.style.left=(screen.availWidth-w)*0.5+'px';
+				layer.style.zIndex='1100';
+				layer.style.padding=10+'px';
+				layer.style.color='#fff';
+				
+	if(document.getElementById("layer")==null) 
+	{
+				document.body.appendChild(layer); 
+				tssto=setTimeout("document.body.removeChild(layer)",3000);
+	}
+	else
+	{
+		window.clearTimeout(tssto);
+		layer.innerHTML+='<div>'+str+'</div>';
+		tssto=setTimeout("document.body.removeChild(layer)",3000);
+	}
+}
+
+
 function hqbdB(formid){
 	var obj=hqbd(formid);
 	var obj2={};
