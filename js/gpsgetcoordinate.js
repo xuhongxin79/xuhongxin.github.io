@@ -11,6 +11,7 @@ s="";
         s += "行进方向" + position.coords.heading;
         s += "地面速度" + position.coords.speed;
         s += "请求的时间" + new Date(position.timestamp);
+alert(s);
       }, function (err) {
         alert(err.code);
 // code：返回获取位置的状态
