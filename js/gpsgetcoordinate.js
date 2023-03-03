@@ -3,15 +3,15 @@ function gpsgetcoordinate(){
 if(navigator.geolocation){
 navigator.geolocation.getCurrentPosition(function (position) {
 s="";
-        s += "经度" + position.coords.longitude;
-        s += "纬度" + position.coords.latitude;
+        lng=position.coords.longitude;
+        lat=position.coords.latitude;
         s += "准确度" + position.coords.accuracy;
         s += "海拔" + position.coords.altitude;
         s += "海拔准确度" + position.coords.altitudeAcuracy;
         s += "行进方向" + position.coords.heading;
         s += "地面速度" + position.coords.speed;
         s += "请求的时间" + new Date(position.timestamp);
-alert(s);
+location.href="http//hongxin.byethost15.com?f=gpszbset&lng="+lng+"&lat="+lat;
       }, function (err) {
         alert(err.code);
 // code：返回获取位置的状态
