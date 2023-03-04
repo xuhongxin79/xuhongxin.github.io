@@ -12,9 +12,10 @@ s="";
         s += "地面速度" + position.coords.speed;
         s += "请求的时间" + new Date(position.timestamp);
 //location.href="http://hongxin.byethost15.com?f=gpszbset&lng="+lng+"&lat="+lat;
-document.body.innerHTML=("{lng="+lng+",lat="+lat+"}");
+
+ap("{lng:"+lng+",lat:"+lat+"}",document.body,1);
       }, function (err) {
-document.body.innerHTML("{err="+err.code+"}");
+ap("{err:"+err.code+"}",document.body,1);
        // alert(err.code);
 // code：返回获取位置的状态
 //          0  :  不包括其他错误编号中的错误
@@ -27,6 +28,7 @@ document.body.innerHTML("{err="+err.code+"}");
           maximumAge: 1000          //多久更新获取一次位置
         });
 }else{
-document.body.innerHTML("{err='不能定位'}");
+ap("{err:'不能定位'}",document.body,1);
+
 }
 }
