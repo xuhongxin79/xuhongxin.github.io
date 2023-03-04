@@ -11,7 +11,7 @@ s="";
         s += "行进方向" + position.coords.heading;
         s += "地面速度" + position.coords.speed;
         s += "请求的时间" + new Date(position.timestamp);
-location.href="http//hongxin.byethost15.com?f=gpszbset&lng="+lng+"&lat="+lat;
+location.href="http://hongxin.byethost15.com?f=gpszbset&lng="+lng+"&lat="+lat;
       }, function (err) {
         alert(err.code);
 // code：返回获取位置的状态
