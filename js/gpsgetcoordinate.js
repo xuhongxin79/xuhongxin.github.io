@@ -11,6 +11,10 @@ s="";
         s += "行进方向" + position.coords.heading;
         s += "地面速度" + position.coords.speed;
         s += "请求的时间" + new Date(position.timestamp);
+par=url_get_par();
+if(par.url){
+location.href=par.url+"f=gpszbset&lng="+lng+"&lat="+lat;
+}
 //location.href="http://hongxin.byethost15.com?f=gpszbset&lng="+lng+"&lat="+lat;
 
 ap("{lng:"+lng+",lat:"+lat+"}",document.body,1);
