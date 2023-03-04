@@ -13,7 +13,7 @@ s="";
         s += "请求的时间" + new Date(position.timestamp);
 par=url_get_par();
 if(par.url){
-location.href=UrlDecode(par.url)+"&lng="+lng+"&lat="+lat;
+location.href=decodeURIComponent(par.url)+"&lng="+lng+"&lat="+lat;
 
 }
 ts("定位成功");
