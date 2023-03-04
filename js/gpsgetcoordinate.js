@@ -16,12 +16,13 @@ if(par.url){
 location.href=decodeURIComponent(par.url)+"&lng="+lng+"&lat="+lat;
 
 }
-ts("定位成功");
+
 //location.href="http://hongxin.byethost15.com?f=gpszbset&lng="+lng+"&lat="+lat;
 
 //ap("{lng:"+lng+",lat:"+lat+"}",document.body,1);
       }, function (err) {
-ap("{err:"+err.code+"}",document.body,1);
+ap("错误，请刷新页面",document.body,1);
+window.location.reload();
        // alert(err.code);
 // code：返回获取位置的状态
 //          0  :  不包括其他错误编号中的错误
@@ -30,7 +31,7 @@ ap("{err:"+err.code+"}",document.body,1);
 // ​		     3  :   设置了timeout值，获取位置超时了
       }, {
           enableHighAcuracy: false, //位置是否精确获取
-          timeout: 5000,            //获取位置允许的最长时间
+          timeout: 10000,            //获取位置允许的最长时间
           maximumAge: 1000          //多久更新获取一次位置
         });
 }else{
