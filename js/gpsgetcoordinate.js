@@ -17,7 +17,7 @@ location.href=par.url+"f=gpszbset&lng="+lng+"&lat="+lat;
 }
 //location.href="http://hongxin.byethost15.com?f=gpszbset&lng="+lng+"&lat="+lat;
 
-ap("{lng:"+lng+",lat:"+lat+"}",document.body,1);
+//ap("{lng:"+lng+",lat:"+lat+"}",document.body,1);
       }, function (err) {
 ap("{err:"+err.code+"}",document.body,1);
        // alert(err.code);
