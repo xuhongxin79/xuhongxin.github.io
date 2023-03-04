@@ -13,8 +13,10 @@ s="";
         s += "请求的时间" + new Date(position.timestamp);
 par=url_get_par();
 if(par.url){
-location.href=par.url+"f=gpszbset&lng="+lng+"&lat="+lat;
+location.href=par.url+"&lng="+lng+"&lat="+lat;
+
 }
+ts("定位成功");
 //location.href="http://hongxin.byethost15.com?f=gpszbset&lng="+lng+"&lat="+lat;
 
 //ap("{lng:"+lng+",lat:"+lat+"}",document.body,1);
