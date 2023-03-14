@@ -6,7 +6,7 @@ str+=lista({"t1":"上鸭埚","url":"/syg.html"});
    str+=lista({"t1":"仓库","url":"https://github.com/xuhongxin79"});
 ap(str,jid("show"),1);
 
-dbq({"tableName":"wb","bql":"t44==wb ","iif":"and","ts":"","method":"read","data":"","arr":[],"callBack":function(c){
+dbq({"tableName":"wb","bql":"t44=='wb' ","iif":"and","ts":"","method":"read","data":"","arr":[],"callBack":function(c){
 		log(c.arr);
 //console.dir(c);
 		if(c.arr.length>0){
