@@ -1,4 +1,11 @@
 window.H={};
+function log(obj){
+if(typeof(obj)=="object"){
+obj=JSON.stringify(obj);
+}
+obj=obj+"";
+alert(obj);
+}
 function jGetTime(){
 var timestamp = Date.parse(new Date());
 return timestamp;
