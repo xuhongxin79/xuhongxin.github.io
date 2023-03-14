@@ -35,7 +35,7 @@ dbq(
      "bql":"",
      "iif":"",
      "ts":"",
-     "method":"add",
+     "method":"tj",
      "data":d,
      "callBack":function(js){
 alert(JSON.stringify(js));
