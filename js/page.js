@@ -29,6 +29,7 @@ function mysave(){
   
 var d={};
   d=hqbdB('form1');
+log(d);
 /*
 dbq({"tableName":"wb","bql":"t44==wb ","iif":"and","ts":"","method":"read","data":"","arr":[],"callBack":function(c){
 		log(c.arr);
