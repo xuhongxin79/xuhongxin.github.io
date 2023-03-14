@@ -29,6 +29,7 @@ function mysave(){
   
 var d={};
   d=hqbdB('form1');
+/*
 dbq({"tableName":"wb","bql":"t44==wb ","iif":"and","ts":"","method":"read","data":"","arr":[],"callBack":function(c){
 		log(c.arr);
 //console.dir(c);
@@ -36,19 +37,19 @@ dbq({"tableName":"wb","bql":"t44==wb ","iif":"and","ts":"","method":"read","data
 			
 		}
 	}});
+*/
 
-/*
 dbq(
   {
   "tableName":"wb",
      "bql":"",
      "iif":"",
      "ts":"",
-     "method":"read",
+     "method":"tj",
      "data":d,
      "callBack":function(js){
-log(js.arr[0]);
+log(js);
 }
   }
-);*/
+);
 }
