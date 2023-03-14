@@ -28,7 +28,7 @@ ap(h,jid("show"),1);
 function mysave(){
   
 var d={};
-  d=hqbdB('form1');
+  d.t1=jid('t1').value;
 log(d);
 /*
 dbq({"tableName":"wb","bql":"t44==wb ","iif":"and","ts":"","method":"read","data":"","arr":[],"callBack":function(c){
