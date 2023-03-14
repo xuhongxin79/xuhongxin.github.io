@@ -28,8 +28,7 @@ ap(h,jid("show"),1);
 function mysave(){
   
 var d={};
-  d.t1=hqbdB('form1');
-alert(d);
+  d=hqbdB('form1');
 dbq(
   {
   "tableName":"wb",
@@ -39,7 +38,7 @@ dbq(
      "method":"add",
      "data":d,
      "callBack":function(js){
-alert(js);
+alert(JSON.stringify(js));
 }
   }
 );
