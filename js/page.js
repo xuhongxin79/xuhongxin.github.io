@@ -35,10 +35,10 @@ dbq(
      "bql":"",
      "iif":"",
      "ts":"",
-     "method":"tj",
+     "method":"read",
      "data":d,
      "callBack":function(js){
-alert(JSON.stringify(js));
+log(js);
 }
   }
 );
