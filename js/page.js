@@ -38,7 +38,7 @@ dbq(
      "method":"read",
      "data":d,
      "callBack":function(js){
-log(js.arr);
+log(js.arr[0]);
 }
   }
 );
