@@ -220,7 +220,7 @@ function js_function_Callcack(fn,args){
 
 
 function js_db_cs(dbjs){
-log(dbjs);
+
 var json=dbjs.json;
 var bql=dbjs.bql;
 if(bql){
