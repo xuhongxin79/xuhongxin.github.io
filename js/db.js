@@ -292,7 +292,7 @@ function dbq(dbjs){
 
 function js_db_del_db(){
 dbq({"tableName":"aa","bql":"","iif":"","ts":"","method":"delDb","data":"","callBack":function(js){
-js_cookie_set("TBTime",js_time_gettime(),365);
+js_cookie_set("TBTime",jGetTime(),365);
 js_cookie_set("TBTime2",1,365);
 ts(js.ts);
 }});
@@ -1024,8 +1024,8 @@ if(dbjs.data){
 	if(dbjs.data["n43"]&&dbjs.data["n42"]&&dbjs.data["n43"]>=10){
 		
 	}else{
-		dbjs.data["n42"]=js_time_gettime();
-		//window.TBTime=js_time_gettime();//更新获取服务器数据的时间
+		dbjs.data["n42"]=jGetTime();
+		//window.TBTime=jGetTime();//更新获取服务器数据的时间
 	}
 	//设置操作记录，1添加2修改3添加修改4有值添加-1删除
 	if(!dbjs.data["n43"]||dbjs.data["n43"]==""){
@@ -1059,7 +1059,7 @@ else if(isArray(dbjs.data)){
 				if(data["n43"]&&data["n42"]&&data["n43"]>=10){
 					data["n42"]=data["n42"];
 				}else{
-					data["n42"]=js_time_gettime();
+					data["n42"]=jGetTime();
 				}
 				
 				if(!data["n43"]||data["n43"]==""){
@@ -1078,7 +1078,7 @@ function db_tb(){
 		js_cookie_set("TBTime2",1,365);
 	}
 	if(!gCookie("TBTime")){//倒序时间
-		js_cookie_set("TBTime",js_time_gettime(),365);
+		js_cookie_set("TBTime",jGetTime(),365);
 	}
 
 	if(!window.yx_n43){//优先回传
@@ -1174,7 +1174,7 @@ function TB6(){
 	}
 	
 	if(!window.TBTime2){//倒序时间
-		window.TBTime2=js_time_gettime();
+		window.TBTime2=jGetTime();
 	}
 	
 	if(!window.px){//初始为正序
@@ -1216,11 +1216,11 @@ function TB7(str){//同步返回处理
 			}
 /*			if(px==1){
 				js_cookie_set("TBTime",js_get["Time"],365);
-				//window.TBTime=js_time_gettime();
+				//window.TBTime=jGetTime();
 			//window.TBTime=js_get.arr[js_get.arr.length-1]["n42"];
 			}else{
 			//	console.log(js_get.arr[js_get.arr.length-1]["n42"]-js_get.arr[0]["n42"]);
-				js_cookie_set("TBTime",js_time_gettime(),365);
+				js_cookie_set("TBTime",jGetTime(),365);
 				if(gCookie("TBTime2")==js_get.Time2){
 					js_cookie_set("TBTime2",1,365);
 				}
