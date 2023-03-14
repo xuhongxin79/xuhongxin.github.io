@@ -7,7 +7,7 @@ str+=lista({"t1":"上鸭埚","url":"/syg.html"});
 ap(str,jid("show"),1);
 
 dbq({"tableName":"wb","bql":"t44=='wb' ","iif":"and","ts":"","method":"read","data":"","arr":[],"callBack":function(c){
-		log(c.arr);
+		log(c);
 //console.dir(c);
 		if(c.arr.length>0){
 			
