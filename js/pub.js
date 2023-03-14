@@ -1,4 +1,34 @@
 window.H={};
+function strE(s){
+		if(typeof(s)=="string"){
+		s=s.replace(/=/g, "【deng】");
+		s=s.replace(/#/g, "【jh】");
+			s=s.replace(/\r\n/g, "<br />");
+			s=s.replace(/\n/g, "<br />");
+			s=s.replace(/"/g, "【syh】");
+			s=s.replace(/\'/g, "【pie】");
+			s=s.replace(/\{/g, "【zdhh】");
+			s=s.replace(/\}/g, "【ydhh】");
+			s=s.replace(/\[/g, "【zzhh】");
+			s=s.replace(/\]/g, "【yzhh】");
+			s=s.replace(/\</g, "【xyh】");
+			s=s.replace(/\>/g, "【dyh】");
+			s=s.replace(/\%/g, "【bfh】");
+			s=s.replace(/\&/g, "【he】");
+			s=s.replace(/\\/g, "【yxk】");
+			s=s.replace(/\//g, "【zxk】");
+			s=s.replace(/ /g, "【kb】");
+			s=s.replace(/\+/g, "【jia】");
+			s=s.replace(/\-/g, "【jian】");
+		}
+		else if(typeof(s)=="object")
+		{
+			for(var key in s){
+				strE(s[key]);
+			}
+		}
+	return s;
+}
 //UrlEncode函数
 function UrlEncode(str){
   var ret="";
