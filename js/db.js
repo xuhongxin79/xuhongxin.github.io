@@ -279,7 +279,6 @@ function dbq(dbjs){
 	dbjs=js_db_set(dbjs);
 	indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
 	if(indexedDB!=null){
-log(dbjs);
 		js_db_idb(dbjs);
 	}else{
 		wdb(dbjs);
