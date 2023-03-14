@@ -1,4 +1,8 @@
 window.H={};
+function jGetTime(){
+var timestamp = Date.parse(new Date());
+return timestamp;
+}
 function strE(s){
 		if(typeof(s)=="string"){
 		s=s.replace(/=/g, "【deng】");
